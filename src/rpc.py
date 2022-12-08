@@ -17,7 +17,7 @@ import json
 
 from .config import Config
 
-logger: Logger = logging.getLogger("qtum-exporter-rpc")
+logger: Logger = logging.getLogger("htmlcoin-exporter-rpc")
 logger.setLevel(level=Config.LOGGING_LEVEL)
 formatter: Formatter = logging.Formatter(
     fmt="%(asctime)s %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S"

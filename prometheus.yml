@@ -7,6 +7,6 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
 
-  - job_name: "qtum-exporter"
+  - job_name: "htmlcoin-exporter"
     static_configs:
-      - targets: ["qtum-exporter:6363"]
+      - targets: ["htmlcoin-exporter:6363"]

@@ -22,7 +22,7 @@ from src.metrics import (
 
 
 def sigterm_handler(*args) -> None:
-    logger.critical("Received SIGTERM. Exiting Qtum (qtumd) monitor.")
+    logger.critical("Received SIGTERM. Exiting Htmlcoin (htmlcoind) monitor.")
     sys.exit(0)
 
 
@@ -33,8 +33,8 @@ def exception_count(exception: Exception) -> None:
 
 
 if __name__ == "__main__":
-    # Set up logging to look similar to qtum logs (UTC).
-    logger: Logger = logging.getLogger(f"qtum-exporter-monitor")
+    # Set up logging to look similar to htmlcoin logs (UTC).
+    logger: Logger = logging.getLogger(f"htmlcoin-exporter-monitor")
     logger.setLevel(level=Config.LOGGING_LEVEL)
     formatter: Formatter = logging.Formatter(
         fmt="%(asctime)s %(name)s %(levelname)s %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     # Handle SIGTERM gracefully.
     signal(SIGTERM, sigterm_handler)
-    logger.info("Started Qtum (qtumd) monitor.")
+    logger.info("Started Htmlcoin (htmlcoind) monitor.")
 
     start_wsgi_server(
         port=Config.METRICS_PORT, addr=Config.METRICS_ADDRESS
@@ -72,5 +72,5 @@ if __name__ == "__main__":
             logger.info("Refresh took %s seconds", duration.total_seconds())
             last_refresh = process_start
     except KeyboardInterrupt:
-        logger.critical("Exiting Qtum (qtumd) monitor.")
+        logger.critical("Exiting Htmlcoin (htmlcoind) monitor.")
         sys.exit(0)

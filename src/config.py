@@ -6,10 +6,10 @@ import os
 
 class Config(object):
     
-    QTUM_RPC_HOST: str = os.environ.get("QTUM_RPC_HOST", default="0.0.0.0")
-    QTUM_RPC_PORT: int = int(os.environ.get("QTUM_RPC_PORT", default="3889"))  # Qtum testnet default port
-    QTUM_RPC_USER: str = os.environ.get("QTUM_RPC_USER", default="qtum")
-    QTUM_RPC_PASSWORD: str = os.environ.get("QTUM_RPC_PASSWORD", default="testpasswd")
+    HTMLCOIN_RPC_HOST: str = os.environ.get("HTMLCOIN_RPC_HOST", default="0.0.0.0")
+    HTMLCOIN_RPC_PORT: int = int(os.environ.get("HTMLCOIN_RPC_PORT", default="4889"))  # Htmlcoin testnet default port
+    HTMLCOIN_RPC_USER: str = os.environ.get("HTMLCOIN_RPC_USER", default="htmlcoin")
+    HTMLCOIN_RPC_PASSWORD: str = os.environ.get("HTMLCOIN_RPC_PASSWORD", default="testpasswd")
 
     HASH_PS_BLOCKS: typing.List[int] = [
         int(block) for block in os.environ.get("HASH_PS_BLOCKS", default="-1,1,120").split(",") if block != str()

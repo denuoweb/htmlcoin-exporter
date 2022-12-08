@@ -64,7 +64,7 @@ Here are the following environment variables with default values:
 | Keys              | Description                                                           | Default Values |
 |-------------------|-----------------------------------------------------------------------|----------------|
 | HTMLCOIN_RPC_HOST     | Bind to given address to listen for JSON-RPC connections              | ``0.0.0.0``    |
-| HTMLCOIN_RPC_PORT     | Listen for JSON-RPC connections on port                               | ``3889``       |
+| HTMLCOIN_RPC_PORT     | Listen for JSON-RPC connections on port                               | ``4889``       |
 | HTMLCOIN_RPC_USER     | Username for JSON-RPC connections                                     | ``htmlcoin``       |
 | HTMLCOIN_RPC_PASSWORD | Password for JSON-RPC connections                                     | ``testpasswd`` |
 | HASH_PS_BLOCKS        | Estimated network hash rate per second                                | ``-1,1,120``   |

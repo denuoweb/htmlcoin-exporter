@@ -86,7 +86,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "floor(sum(rate(qtum_blocks[3h])) * 3600 * 24)",
+          "expr": "floor(sum(rate(htmlcoin_blocks[3h])) * 3600 * 24)",
           "hide": false,
           "legendFormat": "3h",
           "range": true,
@@ -98,7 +98,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "floor(sum(rate(qtum_blocks[6h])) * 3600 * 24)",
+          "expr": "floor(sum(rate(htmlcoin_blocks[6h])) * 3600 * 24)",
           "hide": false,
           "legendFormat": "6h",
           "range": true,
@@ -110,7 +110,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "floor(sum(rate(qtum_blocks[12h])) * 3600 * 24)",
+          "expr": "floor(sum(rate(htmlcoin_blocks[12h])) * 3600 * 24)",
           "hide": false,
           "legendFormat": "12h",
           "range": true,
@@ -122,7 +122,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "floor(sum(rate(qtum_blocks[7d])) * 3600 * 24)",
+          "expr": "floor(sum(rate(htmlcoin_blocks[7d])) * 3600 * 24)",
           "legendFormat": "7d",
           "range": true,
           "refId": "B"
@@ -216,7 +216,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_difficulty)",
+          "expr": "avg(htmlcoin_difficulty)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "difficulty",
@@ -313,7 +313,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_hash_ps)",
+          "expr": "avg(htmlcoin_hash_ps)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "120-blocks",
@@ -326,7 +326,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_hash_ps_neg1)",
+          "expr": "avg(htmlcoin_hash_ps_neg1)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "last-difficulty",
@@ -374,7 +374,7 @@
         "type": "prometheus",
         "uid": "zBoKyEI4z"
       },
-      "description": "Value of the block transactions in QTUM.",
+      "description": "Value of the block transactions in HTMLCOIN.",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -423,10 +423,10 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "sum(qtum_latest_block_value)",
+          "expr": "sum(htmlcoin_latest_block_value)",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "QTUM",
+          "legendFormat": "HTMLCOIN",
           "range": true,
           "refId": "A"
         }
@@ -519,7 +519,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_num_chain_tips)",
+          "expr": "avg(htmlcoin_num_chain_tips)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "tips",
@@ -617,7 +617,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "sum(irate(qtum_total_bytes_sent[5m]))",
+          "expr": "sum(irate(htmlcoin_total_bytes_sent[5m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "sent",
@@ -630,7 +630,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "-sum(irate(qtum_total_bytes_recv[10m]))",
+          "expr": "-sum(irate(htmlcoin_total_bytes_recv[10m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "received",
@@ -678,7 +678,7 @@
         "type": "prometheus",
         "uid": "zBoKyEI4z"
       },
-      "description": "The Qtum protocol and server versions.",
+      "description": "The Htmlcoin protocol and server versions.",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -736,7 +736,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_protocol_version)",
+          "expr": "avg(htmlcoin_protocol_version)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "protocol",
@@ -749,7 +749,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_server_version)",
+          "expr": "avg(htmlcoin_server_version)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "server",
@@ -847,7 +847,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "count(qtum_banned_until) by (reason)",
+          "expr": "count(htmlcoin_banned_until) by (reason)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "ban - {{ reason }}",
@@ -860,7 +860,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "sum(qtum_connections)",
+          "expr": "sum(htmlcoin_connections)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "peers",
@@ -957,7 +957,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_estimate_smart_fee_2)",
+          "expr": "avg(htmlcoin_estimate_smart_fee_2)",
           "format": "time_series",
           "interval": "2m",
           "intervalFactor": 1,
@@ -971,7 +971,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_estimate_smart_fee_20)",
+          "expr": "avg(htmlcoin_estimate_smart_fee_20)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "20-blocks",
@@ -984,7 +984,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_estimate_smart_fee_3)",
+          "expr": "avg(htmlcoin_estimate_smart_fee_3)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "3-blocks",
@@ -997,7 +997,7 @@
             "uid": "zBoKyEI4z"
           },
           "editorMode": "code",
-          "expr": "avg(qtum_estimate_smart_fee_5)",
+          "expr": "avg(htmlcoin_estimate_smart_fee_5)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "5-blocks",
@@ -1040,7 +1040,7 @@
   "schemaVersion": 37,
   "style": "dark",
   "tags": [
-    "Qtum"
+    "Htmlcoin"
   ],
   "templating": {
     "list": []
@@ -1075,7 +1075,7 @@
     ]
   },
   "timezone": "",
-  "title": "Qtum",
+  "title": "Htmlcoin",
   "uid": "OTLC2jHWz",
   "version": 8,
   "weekStart": ""

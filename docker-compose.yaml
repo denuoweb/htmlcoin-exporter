@@ -14,17 +14,17 @@ volumes:
 
 services:
 
-  qtum-testnet:
-    image: qtum/qtum:latest
-    container_name: qtum-testnet
+  htmlcoin-testnet:
+    image: htmlcoin/htmlcoin:latest
+    container_name: htmlcoin-testnet
     restart: always
     ports:
-      - "3889:3889"
-    command: qtumd -testnet -txindex -addrindex=1 -rpcbind=0.0.0.0:3889 -rpcallowip=0.0.0.0/0 -logevents -rpcuser=qtum -rpcpassword=testpasswd -deprecatedrpc=accounts -printtoconsole
+      - "4889:4889"
+    command: htmlcoind -testnet -txindex -addrindex=1 -rpcbind=0.0.0.0:4889 -rpcallowip=0.0.0.0/0 -logevents -rpcuser=htmlcoin -rpcpassword=testpasswd -deprecatedrpc=accounts -printtoconsole
     networks:
       - monitor-network
     volumes:
-      - testnet-volume:/root/.qtum
+      - testnet-volume:/root/.htmlcoin
 
   prometheus:
     image: prom/prometheus:latest
@@ -44,7 +44,7 @@ services:
     networks:
       - monitor-network
     depends_on:
-      - qtum-testnet
+      - htmlcoin-testnet
 
   grafana:
     image: grafana/grafana:latest
@@ -58,24 +58,24 @@ services:
     networks:
       - monitor-network
     depends_on:
-      - qtum-testnet
+      - htmlcoin-testnet
       - prometheus
 
-  qtum-exporter:
-    image: meherett/qtum-exporter:latest
-    container_name: qtum-exporter
+  htmlcoin-exporter:
+    image: meherett/htmlcoin-exporter:latest
+    container_name: htmlcoin-exporter
     ports:
       - "6363:6363"
     restart: always
     environment:
-      QTUM_RPC_HOST: "qtum-testnet"
-      QTUM_RPC_PORT: "3889"
+      HTMLCOIN_RPC_HOST: "htmlcoin-testnet"
+      HTMLCOIN_RPC_PORT: "4889"
       REFRESH_SECONDS: 5
       LOG_LEVEL: "INFO"
       TIMEOUT: 15
     networks:
       - monitor-network
     depends_on:
-      - qtum-testnet
+      - htmlcoin-testnet
       - prometheus
       - grafana
